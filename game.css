@@ -1,0 +1,132 @@
+body {
+  background-image: url("map.png.webp");
+  background-size: 99%;
+  background-repeat: repeat;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead,
+tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 12px 15px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+  color: #009879;
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+datalist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  writing-mode: horizontal-tb;
+  width: 10em;
+}
+
+option {
+  padding: 0;
+}
+
+input[type="range"] {
+  width: 10em;
+  margin: 0;
+}
+/* 
+.control {
+  display: flex;
+  flex-direction: row;
+} */
+
+.title {
+  font-size: 9em;
+  font-weight: 600;
+  background-image: repeating-radial-gradient(
+    circle closest-corner at 100px 100px,
+    #e0c568,
+    #d6ed17 10%,
+    #e0c568 20%
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+}
+
+.container {
+  margin: 0%;
+  display: flex;
+  gap: 48px;
+  /* flex-flow: column wrap;
+  max-height: 1400px; */
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.round,
+.fa-solid {
+  width: fit-content;
+  font-size: 3em;
+  background-color: #a07855;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+}
+
+.line2 {
+  display: flex;
+}
+
+.col-sm-4 {
+  padding-left: 0em;
+}
+
+.control {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #a07855;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.radioClass + .radioMarker {
+  color: rgba(159, 159, 159, 0.6);
+}
+
+.radioClass:checked + .radioMarker {
+  color: #a07855;
+  font-weight: bold;
+}

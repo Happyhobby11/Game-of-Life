@@ -16,6 +16,16 @@ let randomize = [
   Math.random() * 255,
   Math.min(80, Math.random() * 100),
 ];
+
+function randomTest(){
+  return result = [
+    Math.random() * 255,
+    Math.random() * 255,
+    Math.random() * 255,
+    Math.min(80, Math.random() * 100),
+  ];
+}
+
 let colorCode = [
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
 ];
@@ -114,6 +124,7 @@ function uncheckAll() {
 const btn = document.querySelector("#btnForColor");
 btn.onclick = checkAll;
 
+
 function draw() {
   selectedColor = [document.getElementById("colorID").value - 1];
   // selectedColor = random(colorCode);
@@ -122,12 +133,13 @@ function draw() {
   frameRate(parseInt(fr));
   document.querySelector("div.round").innerHTML = `FrameCount: ${frameCount}`;
   if (document.querySelector("#bgRandom").checked === true) {
-    backgroundColor = [
-      Math.random() * 255,
-      Math.random() * 255,
-      Math.random() * 255,
-      Math.random() * 100,
-    ];
+    // backgroundColor = [
+    //   Math.random() * 255,
+    //   Math.random() * 255,
+    //   Math.random() * 255,
+    //   Math.random() * 100,
+    // ];
+    backgroundColor = randomTest();
   } else {
     let colorMode = document.querySelector(
       'input[name="colorMode"]:checked'
